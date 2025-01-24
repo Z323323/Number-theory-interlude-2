@@ -33,11 +33,11 @@ We know that every multiplicative subgroup of $Z_{z}^{\ast}$ will have order $o$
 
 $o | n$
 
-This means that finding $\sum_{d | n} \phi(d)$, means finding the number of generators for every subgroup, ($\phi(d) = \phi(\phi(q))$ for some $q$) and this in turn means that we are finding the whole number of subgroups. Since the whole number of subgroups equals $n$, the theorem follows.
+This means that finding $\sum_{d | n} \phi(d)$, means finding the number of generators for every subgroup, (refer to 'Generators theorem' section at [https://github.com/Z323323/Group-theory-elements/blob/main/README.md]) and this in turn means that we are finding the whole number of subgroups. Since the whole number of subgroups equals $n$, the theorem follows.
 
 These proofs really blow my mind since they prove such a complex theorem in such a quick way. 
 
-Since this proof is quite unbelievable at first, I'm providing a quick example below. Let $Z_{41}^{\ast}$, then
+Since this proof is quite unbelievable at first (note that the proof for 'Generators theorem' I linked has been refined after this one, hence why I was shocked about this theorem), I'm providing a quick example below. Let $Z_{41}^{\ast}$, then
 
 $n = \phi(41) = 40$
 
@@ -47,4 +47,10 @@ $\phi(10) = \phi(2)\phi(5) = 4$
 
 Remember that we will need to only consider the subgroups having exactly an order $o = 10$, since we will find $1$ at the the $10t\lambda$ position for subgroups having $o = 2$ and $o = 5$. If you check this result you will find out that it's correct, hence now we can immediately know how many subgroups exist for a given order $o | n$.
 
+</p>
+
+## Perfect numbers
+
+<p>
+  
 </p>
