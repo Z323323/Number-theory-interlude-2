@@ -54,15 +54,13 @@ Remember that we will need to only consider the subgroups having exactly an orde
 <p>
   Refer to [https://crypto.stanford.edu/pbc/notes/numbertheory/mult.html].
   
-  First, we define the Sigma function on any positive integer $n$ as the sum of every divisor $d$ of $n$ such that $d \leq n$, and we write it as
-
-  $\sigma(n)$
+  First, we define the Sigma function on any positive integer $n$ as the sum of every divisor $d$ of $n$ such that $d \leq n$, and we write it as $\sigma(n)$.
 
   Second, we define the Perfect Numbers $n$ as the positive integers such that
 
   $\sigma(n) = 2n$
 
-  The first $4$ Perfect Numbers are $6, 28, 496, 8128$. 
+  [The first $4$ Perfect Numbers are $6, 28, 496, 8128$.]
 
   Let $n$ an even perfect number; we define it as
 
@@ -106,25 +104,58 @@ Remember that we will need to only consider the subgroups having exactly an orde
 
   This implies $q$ being a prime number too. I've found the reason of this at [https://math.stackexchange.com/questions/1154592/if-an-1-is-prime-then-a-2-and-n-is-prime?noredirect=1&lq=1], but I'm bringing that back here since there are a couples of important things (basic but non-trivial = important). The provided proof extends the reasoning to a more general case, which is easy to analyze and so I'm referring to it.
 
+  $-----$
+
   #### Theorem
 
-  If
-
-  $a^{q} - 1$
-
-  is prime, then $a = 2$ and $q$ is prime.
+  If $a^{q} - 1$ is prime, then $a = 2$ and $q$ is prime.
 
   #### Proof
 
   $a^{q} - 1 = (a - 1)(a^{q - 1} + a^{q - 2} + \dots + a + 1)$
 
-  thus $a - 1 | a^{q} - 1$, and if $a^{q} - 1$ is prime then we necessarily have $a = 2$. Now, let $q = kl$ then
+  thus $a - 1 | a^{q} - 1$ always, then if $a^{q} - 1$ is prime we necessarily have $a = 2$. Now, let $q = kl$ then
 
   $a^{kl} - 1 = (a^{k} - 1)(a^{k(l - 1)} + a^{k(l - 2)} + \dots + a^{k} + 1)$<br>
   $or$<br>
   $a^{kl} - 1 = (a^{l} - 1)(a^{l(k - 1)} + a^{l(k - 2)} + \dots + a^{l} + 1)$
 
-  thus, if $q$ is composite, we will always have $2^{k} - 1, 2^{l} - 1 | 2^{q} - 1$ which divide it, and therefore $q$ must be prime in order for $a^{q} - 1$ to be prime.
+  thus, if $q$ is composite, we will always have $a^{k} - 1, a^{l} - 1, \dots | a^{q} - 1$, and therefore $q$ must be prime too in order for $2^{q} - 1$ to be prime, but if it is, we can't still say that $2^{q} - 1$ will be prime :'D.
 
+  $-----$
+
+  A number of the form $2^{q} - 1$ is called a Mersenne number, and if it is prime then is called a Mersenne Prime.
+  Perfect Numbers should require a more in depth analysis, but for the moment we are moving forward since the linked resource doesn't go very much over the fact they always end up with an $odd$ followed by $6$, or $28$ (proved reasoning $\mod 100$).
   
 </p> 
+
+## Fermat numbers
+
+<p>
+  If Mersenne numbers are of the form $2^{q} - 1$, then what about numbers of the form $2^{f} + 1$?
+
+  #### Theorem
+
+  If $2^{f} + 1$ is prime then $f = 2^{m}$ for some $m$.
+
+  #### Proof
+
+  I found the proof at [https://math.stackexchange.com/questions/2794208/is-my-proof-correct-on-how-k-must-be-a-power-of-2-are-there-other-proofs], and I'm going to delve it below. We are going to show that a number of the form $x^{f} + 1$ always has a some divisor if $f$ has an $odd$ cofactor.
+
+  $x^{f} + 1 = (x + 1)(x^{f - 1} - x^{f - 2} + x^{f - 3} - \dots + x^{2} - x + 1)$
+
+  The picture below better clarifies why, also $x^{2}$ is because in order to have $2$ we need to remove an $odd$ from $f$ ($x$ and $1$ follow).
+
+  ![FN](./FN.png)
+
+  This proves why $f$ can't be $odd$, now, let $f = rs$ where $r$ is $odd$ and $s$ is some $2$ power. We have
+
+  $x^{rs} - 1 = (x^{s} + 1)(x^{s(r - 1)} - x^{s(r - 2)} + x^{s(r - 2)} - \dots + x^{s2} - x^{s} + 1)$
+
+  where the picture below better clarifies why, and also better clarifies the previous section.
+
+  ![FN2](./FN2.png)
+
+  The theorem follows since the only option left in order to not always have a divisor is $f = 2^{m}$ for some $m$.
+
+</p>
