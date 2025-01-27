@@ -140,7 +140,7 @@ Remember that we will need to only consider the subgroups having exactly an orde
 
   #### Proof
 
-  I found the proof at [https://math.stackexchange.com/questions/2794208/is-my-proof-correct-on-how-k-must-be-a-power-of-2-are-there-other-proofs], and I'm going to delve it below. We are going to show that a number of the form $x^{f} + 1$ always has a some divisor if $f$ has an $odd$ cofactor.
+  I found the proof at [https://math.stackexchange.com/questions/2794208/is-my-proof-correct-on-how-k-must-be-a-power-of-2-are-there-other-proofs], and I'm going to delve it below. We are going to show that a number of the form $x^{f} + 1$ always has some divisor if $f$ has an $odd$ cofactor.
 
   $x^{f} + 1 = (x + 1)(x^{f - 1} - x^{f - 2} + x^{f - 3} - \dots + x^{2} - x + 1)$
 
@@ -150,7 +150,7 @@ Remember that we will need to only consider the subgroups having exactly an orde
 
   This proves why $f$ can't be $odd$, now, let $f = rs$ where $r$ is $odd$ and $s$ is some $2$ power. We have
 
-  $x^{rs} - 1 = (x^{s} + 1)(x^{s(r - 1)} - x^{s(r - 2)} + x^{s(r - 2)} - \dots + x^{s2} - x^{s} + 1)$
+  $x^{rs} + 1 = (x^{s} + 1)(x^{s(r - 1)} - x^{s(r - 2)} + x^{s(r - 2)} - \dots + x^{s2} - x^{s} + 1)$
 
   where the picture below better clarifies why, and also better clarifies the previous section.
 
