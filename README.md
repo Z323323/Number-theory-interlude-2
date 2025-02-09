@@ -37,7 +37,7 @@ This means that finding $\sum_{d | n} \phi(d)$, means finding the number of gene
 
 These proofs really blow my mind since they prove such a complex theorem in such a quick way. 
 
-Since this proof is quite unbelievable at first (note that the proof for 'Generators theorem' I linked has been refined after this one, hence why I was shocked about this theorem), I'm providing a quick example below. Let $Z_{41}^{\ast}$, then
+Since this proof is quite unbelievable at first (note that the proof for 'Generators theorem' I linked has been refined after this one), I'm providing a quick example below. Let $Z_{41}^{\ast}$, then
 
 $n = \phi(41) = 40$
 
