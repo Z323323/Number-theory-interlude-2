@@ -1,12 +1,15 @@
 # Number theory interlude 2
 
 <p>
+  
   This article extends [https://github.com/Z323323/Number-theory-interlude-1].
+  
 </p>
 
 ## Solovay-Strassen test
 
 <p>
+  
   To fully understand this section you should have read [https://github.com/Z323323/Quadratic-residues].
   
   I won't delve this test, since this test is worse than Miller-Rabin's and the linked resource is self-explainatory. Just note that everything reduces to
@@ -14,11 +17,13 @@
   $\displaystyle (\frac{b}{r})$
 
   which has $1/2$ probability of pass the test, thus ~half of the times a Carmichael number will fool this test too.
+  
 </p>
 
 ## $\sum_{d | n} \phi(d) = n$
 
 <p>
+  
   Refer to [https://crypto.stanford.edu/pbc/notes/numbertheory/mult.html].
 
 #### Proof
@@ -37,7 +42,9 @@ This means that finding $\sum_{d | n} \phi(d)$, means finding the number of gene
 
 These proofs really blow my mind since they prove such a complex theorem in such a quick way. 
 
-Since this proof is quite unbelievable at first (note that the proof for 'Generators theorem' I linked has been refined after this one), I'm providing a quick example below. Let $Z_{41}^{\ast}$, then
+#### Example
+
+Let $Z_{41}^{\ast}$, then
 
 $n = \phi(41) = 40$
 
@@ -52,6 +59,7 @@ Remember that we will need to only consider the subgroups having exactly an orde
 ## Perfect Numbers
 
 <p>
+  
   Refer to [https://crypto.stanford.edu/pbc/notes/numbertheory/mult.html].
   
   First, we define the Sigma function on any positive integer $n$ as the sum of every divisor $d$ of $n$ such that $d \leq n$, and we write it as $\sigma(n)$.
@@ -132,6 +140,7 @@ Remember that we will need to only consider the subgroups having exactly an orde
 ## Fermat numbers
 
 <p>
+  
   If Mersenne numbers are of the form $2^{q} - 1$, then what about numbers of the form $2^{f} + 1$?
 
   #### Theorem
@@ -148,9 +157,9 @@ Remember that we will need to only consider the subgroups having exactly an orde
 
   ![FN](./FN.png)
 
-  This proves why $f$ can't be $odd$, now, let $f = rs$ where $r$ is $odd$ and $s$ is some $2$ power. We have
+  This proves why $f$ can't be $odd$ (the structure showed is applicable for any $odd$ exponent), now, let $f = rs$ where $r$ is $odd$ and $s$ is some $2$ power. We have
 
-  $x^{rs} + 1 = (x^{s} + 1)(x^{s(r - 1)} - x^{s(r - 2)} + x^{s(r - 2)} - \dots + x^{s2} - x^{s} + 1)$
+  $x^{rs} + 1 = (x^{s} + 1)(x^{s(r - 1)} - x^{s(r - 2)} + x^{s(r - 3)} - \dots + x^{s2} - x^{s} + 1)$
 
   where the picture below better clarifies why, and also better clarifies the previous section.
 
